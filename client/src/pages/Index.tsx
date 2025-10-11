@@ -6,7 +6,7 @@ import ImageLoop from '@/components/ImageLoop';
 // Cover videos
 const cover1Video = "https://res.cloudinary.com/dr3xey7h9/video/upload/v1760178149/cover1_oaxvl0.mp4";
 const cover2Video = "https://res.cloudinary.com/dr3xey7h9/video/upload/v1760178155/cover2_y1imab.mp4";
-const cover3Video = "https://res.cloudinary.com/dr3xey7h9/video/upload/v1760178160/1011_qxyiep.mp4";
+const cover3Video = "https://res.cloudinary.com/dr3xey7h9/video/upload/v1760197714/video_2025-10-11_23-48-15_vwkuyd.mp4";
 import CountdownSection from '@/components/CountdownSection';
 import StorySection from '@/components/StorySection';
 import TimelineCardsSection from '@/components/TimelineCardsSection';
