@@ -37,7 +37,7 @@ const FAQSection = () => {
     {
       question: "Do we really need to RSVP?",
       icon: MessageCircle,
-      answer: "Yes! To make sure you are included on our final guest list, please confirm your attendance on or before October 30, 2025"
+      answer: "Yes! To make sure you are included on our final guest list, please confirm your attendance on or before November 15, 2025"
     },
     {
       question: "I already answered YES to the RSVP but something came up and cannot attend anymore. What should I do?",
