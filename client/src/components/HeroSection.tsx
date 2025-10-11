@@ -13,55 +13,6 @@ const HeroSection = ({ audioRef }: HeroSectionProps) => {
   const { animationsEnabled } = useAnimationContext();
   const videoRef = useRef<HTMLVideoElement>(null);
 
-  // Detect Safari browser (including WebKit-based iOS browsers)
-  // Safari-specific fix: Skip audio-video sync on Safari to prevent video loops from pausing audio
-  const isSafari = typeof navigator !== 'undefined' && /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
-  // Sync video sound with background music
-  useEffect(() => {
-    const audio = audioRef.current;
-    const video = videoRef.current;
-    if (!audio || !video) return;
-
-    // Safari: Keep video always muted to prevent interference with audio
-    if (isSafari) {
-      video.muted = true;
-      return; // Skip all audio-video sync on Safari to prevent conflicts
-    }
-
-    const syncVideoWithAudio = () => {
-      video.muted = audio.paused || audio.muted || audio.volume === 0;
-      if (!video.muted) {
-        video.volume = audio.volume;
-      }
-    };
-
-    const handlePlay = () => {
-      video.muted = false;
-      video.volume = audio.volume;
-    };
-
-    const handlePause = () => {
-      video.muted = true;
-    };
-
-    const handleVolumeChange = () => {
-      syncVideoWithAudio();
-    };
-
-    audio.addEventListener('play', handlePlay);
-    audio.addEventListener('pause', handlePause);
-    audio.addEventListener('volumechange', handleVolumeChange);
-
-    syncVideoWithAudio();
-
-    return () => {
-      audio.removeEventListener('play', handlePlay);
-      audio.removeEventListener('pause', handlePause);
-      audio.removeEventListener('volumechange', handleVolumeChange);
-    };
-  }, [audioRef, isSafari]);
-
   return (
     <section 
       className="hero-section bg-white relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
