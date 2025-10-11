@@ -13,14 +13,11 @@ const HeroSection = ({ audioRef }: HeroSectionProps) => {
   const { animationsEnabled } = useAnimationContext();
   const videoRef = useRef<HTMLVideoElement>(null);
 
-<<<<<<< HEAD
   // Detect Safari browser (including WebKit-based iOS browsers)
   // Safari-specific fix: Skip audio-video sync on Safari to prevent video loops from pausing audio
   const isSafari = typeof navigator !== 'undefined' && /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
   // Sync video sound with background music
-=======
->>>>>>> 3ddc2dce59ede22f0745bcfbbaae330272530cf8
   useEffect(() => {
     const audio = audioRef.current;
     const video = videoRef.current;
