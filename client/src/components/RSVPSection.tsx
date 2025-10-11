@@ -83,7 +83,7 @@ const RSVPSection = () => {
                 </p>
                 <p className="text-center">
                   <span className="font-body text-base md:text-lg font-bold text-white px-3 py-1 rounded whitespace-nowrap" style={{ backgroundColor: '#333333' }}>
-                    THE DEADLINE IS OCTOBER 30
+                    THE DEADLINE IS NOVEMBER 15
                   </span>
                 </p>
               </div>
