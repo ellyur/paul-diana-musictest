@@ -40,24 +40,24 @@ const RSVPSection = () => {
             />
           </div>
 
-          {/* Decorative "RSVP" text as background */}
-          <motion.div 
-            className="absolute inset-0 flex items-center justify-center pointer-events-none"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 11.2 }}
-          >
-            <span 
-              className="text-[120px] md:text-[180px] lg:text-[220px] leading-[0.8] text-black opacity-10 tracking-tight"
-              style={{ fontFamily: 'Boska, serif', fontWeight: 350 }}
-              data-testid="text-rsvp-title"
-            >
-              RS<br />VP
-            </span>
-          </motion.div>
-
           {/* Content */}
-          <div className="relative z-20 text-center px-4 w-full max-w-4xl mx-auto flex flex-col items-center justify-center min-h-[600px]">
+          <div className="relative z-10 text-center px-4 w-full max-w-4xl mx-auto">
+            {/* "RSVP" - Split into RS and VP */}
+            <motion.div 
+              className="mb-12"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 11.2 }}
+            >
+              <span 
+                className="text-[150px] md:text-[240px] lg:text-[320px] leading-[0.8] text-black tracking-tight block"
+                style={{ fontFamily: 'Boska, serif', fontWeight: 350 }}
+                data-testid="text-rsvp-title"
+              >
+                RS<br />VP
+              </span>
+            </motion.div>
+
             {/* Deadline and Button */}
             <motion.div 
               className="space-y-6"
