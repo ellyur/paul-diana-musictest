@@ -14,7 +14,7 @@ const RSVPSection = () => {
       <div className="max-w-5xl mx-auto px-4 relative z-10">
         {/* Section Header */}
         <motion.div 
-          className="text-center mb-16"
+          className="text-center mb-4"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 10.8 }}
@@ -44,7 +44,7 @@ const RSVPSection = () => {
           <div className="relative z-10 text-center px-4 w-full max-w-4xl mx-auto">
             {/* "RSVP" - Split into RS and VP */}
             <motion.div 
-              className="mb-12"
+              className="mb-4"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 11.2 }}
