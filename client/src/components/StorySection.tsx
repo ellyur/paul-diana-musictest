@@ -40,7 +40,7 @@ const StorySection = () => {
       id: 4,
       title: "Distance & Perseverance",
       text: "Distance became part of our story when one of us went abroad. Yet through every challenge, our hearts remained steadfast and our love never faltered.",
-      image: "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760168746/05f2fa4b-69a1-4317-afea-3d5db95130e7_1_jlknxb.jpg",
+      image: "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760263358/554384870_1695862364442290_3733811456861736073_n_zddcnk.jpg",
       icon: Plane
     },
     {

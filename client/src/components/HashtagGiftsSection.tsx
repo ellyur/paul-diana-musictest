@@ -69,35 +69,14 @@ const HashtagGiftsSection = () => {
                   className="text-sm md:text-base text-foreground/80 leading-relaxed"
                   data-testid="text-gifts-message"
                 >
-                  Thanks a million for your love and support. Let's make some great memories together!
+                  Your presence is the greatest gift we could ever receive.
                   <br /><br />
-                  If you wish to send us an early gift, please scan the QR below.
+                  Should you wish to extend your generosity, a token of love and support toward our new beginnings would be deeply appreciated.
+                  <br /><br />
+                  With love and gratitude,
+                  <br />
+                  Paul and Diana
                 </p>
-              </motion.div>
-            </motion.div>
-          </div>
-
-          {/* Bottom Section with QR Code */}
-          <div className="bg-background/95 backdrop-blur-sm py-12 px-4">
-            <motion.div 
-              className="max-w-2xl mx-auto text-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 1.4 }}
-            >
-              <motion.div
-                className="inline-block bg-white p-6 rounded-2xl shadow-xl"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: 1.6, type: "spring" }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <img 
-                  src="https://res.cloudinary.com/dr3xey7h9/image/upload/v1760114149/qr_werccl.png"
-                  alt="Bank QR Code"
-                  className="w-[576px] h-[576px] object-contain max-w-full"
-                  data-testid="img-qr-code"
-                />
               </motion.div>
             </motion.div>
           </div>
