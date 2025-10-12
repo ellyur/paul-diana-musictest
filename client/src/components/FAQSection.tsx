@@ -43,6 +43,11 @@ const FAQSection = () => {
       question: "I already answered YES to the RSVP but something came up and cannot attend anymore. What should I do?",
       icon: MessageCircle,
       answer: "We're sorry to hear you can no longer be part of our special day. However, please let us know ahead of time so we can offer your seat/s to other guests."
+    },
+    {
+      question: "I already said no to the RSVP but my schedule cleared up and I can attend now. What should I do?",
+      icon: MessageCircle,
+      answer: "Changed your mind? If you've already said no but your schedule has cleared, kindly message us first — your spot might have been given to another guest, but we'll happily check if there's still room for you to celebrate with us!"
     }
   ];
 
