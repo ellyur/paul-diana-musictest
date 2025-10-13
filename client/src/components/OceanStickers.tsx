@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { optimizeCloudinaryUrl } from '@/lib/cloudinaryOptimize';
 
 interface OceanStickersProps {
   variant?: 'hero' | 'section' | 'navigation' | 'footer';
@@ -7,16 +8,17 @@ interface OceanStickersProps {
 }
 
 const OceanStickers = ({ variant = 'section', density = 'medium', className = '' }: OceanStickersProps) => {
+  // Optimized sticker images - small decorative elements
   const stickers = [
-    'https://res.cloudinary.com/dbciwaal4/image/upload/v1759151728/fish-element_uwneg1.png',
-    'https://res.cloudinary.com/dbciwaal4/image/upload/v1759151728/ocean-creature2_f3mkao.png',
-    'https://res.cloudinary.com/dbciwaal4/image/upload/v1759151728/ocean-creature_nfhpgk.png',
-    'https://res.cloudinary.com/dbciwaal4/image/upload/v1759151724/ocean-creature3_v5mkxe.png',
-    'https://res.cloudinary.com/dbciwaal4/image/upload/v1759151723/ocean-creature4_xymcyc.png',
-    'https://res.cloudinary.com/dbciwaal4/image/upload/v1759151723/ocean-creature5_iwewvu.png',
-    'https://res.cloudinary.com/dbciwaal4/image/upload/v1759151722/ocean-creature6_evnb5h.png',
-    'https://res.cloudinary.com/dbciwaal4/image/upload/v1759151722/ocean-creature7_qn5zyz.png',
-    'https://res.cloudinary.com/dbciwaal4/image/upload/v1759151722/ocean-creature8_poizdd.png'
+    optimizeCloudinaryUrl('https://res.cloudinary.com/dbciwaal4/image/upload/v1759151728/fish-element_uwneg1.png', { width: 100, quality: 'auto:eco' }),
+    optimizeCloudinaryUrl('https://res.cloudinary.com/dbciwaal4/image/upload/v1759151728/ocean-creature2_f3mkao.png', { width: 100, quality: 'auto:eco' }),
+    optimizeCloudinaryUrl('https://res.cloudinary.com/dbciwaal4/image/upload/v1759151728/ocean-creature_nfhpgk.png', { width: 100, quality: 'auto:eco' }),
+    optimizeCloudinaryUrl('https://res.cloudinary.com/dbciwaal4/image/upload/v1759151724/ocean-creature3_v5mkxe.png', { width: 100, quality: 'auto:eco' }),
+    optimizeCloudinaryUrl('https://res.cloudinary.com/dbciwaal4/image/upload/v1759151723/ocean-creature4_xymcyc.png', { width: 100, quality: 'auto:eco' }),
+    optimizeCloudinaryUrl('https://res.cloudinary.com/dbciwaal4/image/upload/v1759151723/ocean-creature5_iwewvu.png', { width: 100, quality: 'auto:eco' }),
+    optimizeCloudinaryUrl('https://res.cloudinary.com/dbciwaal4/image/upload/v1759151722/ocean-creature6_evnb5h.png', { width: 100, quality: 'auto:eco' }),
+    optimizeCloudinaryUrl('https://res.cloudinary.com/dbciwaal4/image/upload/v1759151722/ocean-creature7_qn5zyz.png', { width: 100, quality: 'auto:eco' }),
+    optimizeCloudinaryUrl('https://res.cloudinary.com/dbciwaal4/image/upload/v1759151722/ocean-creature8_poizdd.png', { width: 100, quality: 'auto:eco' })
   ];
 
   const getVariantPositions = () => {

@@ -1,7 +1,11 @@
 import { motion } from 'framer-motion';
+import { optimizeCloudinaryUrl } from '@/lib/cloudinaryOptimize';
 
 const RSVPSection = () => {
-  const ringImage = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760115700/7af95078-ed51-4993-89eb-6f5f4d9be205-removebg-preview_xmuztu.png";
+  const ringImage = optimizeCloudinaryUrl(
+    "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760115700/7af95078-ed51-4993-89eb-6f5f4d9be205-removebg-preview_xmuztu.png",
+    { width: 600, quality: 'auto:good' }
+  );
   
   return (
     <motion.section 

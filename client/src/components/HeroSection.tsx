@@ -1,8 +1,12 @@
 import { TypeAnimation } from 'react-type-animation';
 import { useState, useEffect, useRef } from 'react';
 import { useAnimationContext } from '@/contexts/AnimationContext';
+import { optimizeCloudinaryVideo } from '@/lib/cloudinaryOptimize';
 
-const heroVideo = "https://res.cloudinary.com/dr3xey7h9/video/upload/v1760101530/top_page_eeee0w.mp4";
+const heroVideo = optimizeCloudinaryVideo(
+  "https://res.cloudinary.com/dr3xey7h9/video/upload/v1760101530/top_page_eeee0w.mp4",
+  { width: 1920, quality: 'auto:low' }
+);
 
 interface HeroSectionProps {
   audioRef: React.RefObject<HTMLAudioElement>;

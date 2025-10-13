@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
+import { optimizeCloudinaryUrl } from '@/lib/cloudinaryOptimize';
 
-const backgroundImage = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760112875/fb109d51-e0f3-4bfe-990b-d0d91e07eaf9.png";
-const qrCodeImage = "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760112758/e0470bd7-d558-4ffc-ab72-05979e344aee.png";
+const backgroundImage = optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760112875/fb109d51-e0f3-4bfe-990b-d0d91e07eaf9.png", { width: 1200, quality: 'auto:good' });
+const qrCodeImage = optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760112758/e0470bd7-d558-4ffc-ab72-05979e344aee.png", { width: 400, quality: 'auto:good' });
 
 const HashtagGiftsSection = () => {
   return (

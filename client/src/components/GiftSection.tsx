@@ -1,5 +1,6 @@
 import { Heart, Gift, Home } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { optimizeCloudinaryUrl } from '@/lib/cloudinaryOptimize';
 
 const GiftSection = () => {
   return (
@@ -70,7 +71,7 @@ const GiftSection = () => {
               <h3 className="text-lg font-display font-semibold text-gold-bright mb-4 text-center">GCash</h3>
               <div className="text-center mb-4">
                 <img 
-                  src="https://res.cloudinary.com/dpzxdmqqg/image/upload/v1755332552/532087756_3192844410882952_149850844084049446_n_v5dj7e.jpg"
+                  src={optimizeCloudinaryUrl("https://res.cloudinary.com/dpzxdmqqg/image/upload/v1755332552/532087756_3192844410882952_149850844084049446_n_v5dj7e.jpg", { width: 400, quality: 'auto:good' })}
                   alt="GCash QR Code"
                   className="w-64 h-64 mx-auto object-contain"
                 />
