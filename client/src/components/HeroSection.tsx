@@ -85,7 +85,15 @@ const HeroSection = ({ audioRef }: HeroSectionProps) => {
 
         {/* Scroll Down Arrow */}
         <div className={`transition-all duration-700 mt-12 ${(animationsEnabled && showElements) ? 'animate-fade-up opacity-100' : (!animationsEnabled ? 'opacity-100' : 'opacity-0')}`}>
-          <span className="text-3xl sm:text-4xl text-white animate-bounce">↓</span>
+          <div className="flex items-center justify-center space-x-4">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white animate-bounce" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/>
+            </svg>
+            <span className="text-xs sm:text-sm text-white/80">Scroll down</span>
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white animate-pulse" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+            </svg>
+          </div>
         </div>
       </div>
 
