@@ -33,7 +33,7 @@ const EntourageSection = () => {
       women: [
         "Major Irene Ibale",
         "Mrs. Anecita Diaz",
-        "Ms. Marilyn C. Flores",
+        "Ms. Marilyn Flores",
         "Mrs. Elsie Obenza",
         "Mrs. Josephine Gabriel",
         "Dr. Beah Bautista",
@@ -258,7 +258,7 @@ const EntourageSection = () => {
                 Senior Groomsmen
               </h3>
               {entourageData.seniorGroomsmen.map((name, index) => (
-                <p key={index} className="text-xs md:text-base lg:text-lg font-telma text-foreground mb-1 text-right" data-testid={`senior-groomsman-${index}`}>
+                <p key={index} className={`${name === "Keane Kimverlee Eusebio" ? "text-[10px] md:text-sm lg:text-base" : "text-xs md:text-base lg:text-lg"} font-telma text-foreground mb-1 text-right`} data-testid={`senior-groomsman-${index}`}>
                   {name}
                 </p>
               ))}
