@@ -204,9 +204,13 @@ And now, as we begin this new chapter hand in hand, we remain hopeful and prayer
             Scroll vertically to journey through our love story horizontally
           </p>
           
-          {/* Simple Down Arrow */}
-          <div className="mt-6 text-4xl sm:text-5xl text-primary animate-bounce">
-            ↓
+          {/* Arrow Indicator with Box */}
+          <div className="flex flex-col items-center justify-center mt-8 sm:mt-12 bg-primary/10 rounded-2xl px-8 py-6 max-w-md mx-auto border-2 border-primary/30" style={{ animation: 'blink 2s ease-in-out infinite' }}>
+            <div className="flex flex-col items-center space-y-3">
+              <div className="text-5xl sm:text-6xl text-primary animate-bounce">↓</div>
+              <span className="text-xl sm:text-2xl font-bold text-primary">SCROLL DOWN</span>
+              <div className="text-5xl sm:text-6xl text-primary animate-bounce" style={{ animationDelay: '0.3s' }}>↓</div>
+            </div>
           </div>
         </motion.div>
       </div>
