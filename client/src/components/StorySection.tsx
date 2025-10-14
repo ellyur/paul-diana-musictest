@@ -204,13 +204,15 @@ And now, as we begin this new chapter hand in hand, we remain hopeful and prayer
             Scroll vertically to journey through our love story horizontally
           </p>
           
-          {/* Arrow Indicator with Box */}
-          <div className="flex flex-col items-center justify-center mt-8 sm:mt-12 bg-primary/10 rounded-2xl px-8 py-6 max-w-md mx-auto border-2 border-primary/30" style={{ animation: 'blink 2s ease-in-out infinite' }}>
-            <div className="flex flex-col items-center space-y-3">
-              <div className="text-5xl sm:text-6xl text-primary animate-bounce">↓</div>
-              <span className="text-xl sm:text-2xl font-bold text-primary">SCROLL DOWN</span>
-              <div className="text-5xl sm:text-6xl text-primary animate-bounce" style={{ animationDelay: '0.3s' }}>↓</div>
-            </div>
+          {/* SVG Arrow Indicator */}
+          <div className="flex items-center justify-center space-x-4 mt-6 sm:mt-8">
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary animate-bounce" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/>
+            </svg>
+            <span className="text-xs sm:text-sm text-muted-foreground">Scroll down</span>
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground animate-pulse" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+            </svg>
           </div>
         </motion.div>
       </div>
