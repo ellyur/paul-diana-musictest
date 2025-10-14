@@ -208,7 +208,6 @@ And now, as we begin this new chapter hand in hand, we remain hopeful and prayer
           <div className="flex items-center justify-center space-x-4 mt-6 sm:mt-8">
             <span className="text-2xl sm:text-3xl text-primary animate-bounce">↓</span>
             <span className="text-xs sm:text-sm text-muted-foreground">Scroll down</span>
-            <span className="text-2xl sm:text-3xl text-primary" style={{ animation: 'blink 2s ease-in-out infinite' }}>↓</span>
           </div>
         </motion.div>
       </div>
