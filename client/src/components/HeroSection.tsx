@@ -82,6 +82,11 @@ const HeroSection = ({ audioRef }: HeroSectionProps) => {
             December 26, 2025 . Moncada Tarlac
           </p>
         </div>
+
+        {/* Scroll Down Arrow */}
+        <div className={`transition-all duration-700 mt-12 ${(animationsEnabled && showElements) ? 'animate-fade-up opacity-100' : (!animationsEnabled ? 'opacity-100' : 'opacity-0')}`}>
+          <span className="text-3xl sm:text-4xl text-white animate-bounce">↓</span>
+        </div>
       </div>
 
       {/* Styles */}

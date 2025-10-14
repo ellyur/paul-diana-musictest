@@ -206,8 +206,13 @@ And now, as we begin this new chapter hand in hand, we remain hopeful and prayer
           
           {/* SVG Arrow Indicator */}
           <div className="flex items-center justify-center space-x-4 mt-6 sm:mt-8">
-            <span className="text-2xl sm:text-3xl text-primary animate-bounce">↓</span>
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary animate-bounce" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z"/>
+            </svg>
             <span className="text-xs sm:text-sm text-muted-foreground">Scroll down</span>
+            <svg className="w-5 h-5 sm:w-6 sm:h-6 text-primary-foreground animate-pulse" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z"/>
+            </svg>
           </div>
         </motion.div>
       </div>
