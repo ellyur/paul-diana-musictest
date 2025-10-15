@@ -2,57 +2,39 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { X } from 'lucide-react';
-import { optimizeCloudinaryUrl } from '@/lib/cloudinaryOptimize';
 
-// Prenup photos - optimized for web delivery
-const prenup = optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170289/JAH02449_m2d5nl.jpg", { width: 800, quality: 'auto:good' });
-const prenup1 = optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170290/JAH02851_gevif1.jpg", { width: 800, quality: 'auto:good' });
-const prenup2 = optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170290/JAH02557_rncjlm.jpg", { width: 800, quality: 'auto:good' });
-const prenup3 = optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170291/JAH02783_rixrlo.jpg", { width: 800, quality: 'auto:good' });
-const prenup4 = optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170291/JAH03027_oevui5.jpg", { width: 800, quality: 'auto:good' });
-const prenup5 = optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170293/JAH03090_pifxoh.jpg", { width: 800, quality: 'auto:good' });
-const prenup6 = optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170294/JAH03133_tfhm3n.jpg", { width: 800, quality: 'auto:good' });
-const prenup7 = optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170295/JAH03213_m2qf1t.jpg", { width: 800, quality: 'auto:good' });
-const prenup8 = optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170296/JAH03239_ryy3xy.jpg", { width: 800, quality: 'auto:good' });
-const prenup9 = optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170298/JAH03286_nnbv3n.jpg", { width: 800, quality: 'auto:good' });
-const prenup10 = optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170299/JAH03363_zsco95.jpg", { width: 800, quality: 'auto:good' });
-const prenup11 = optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170490/JAH03394_vhicji.jpg", { width: 800, quality: 'auto:good' });
-const prenup12 = optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170490/JAH03438_db2lvx.jpg", { width: 800, quality: 'auto:good' });
+// Local prenup photos
+import prenup1 from '@assets/prenup1_1760518054632.jpg';
+import prenup2 from '@assets/prenup2_1760518054633.jpg';
+import prenup3 from '@assets/prenup3_1760518054633.jpg';
+import prenup4 from '@assets/prenup4_1760518054634.jpg';
+import prenup5 from '@assets/prenup5_1760518054634.jpg';
+import prenup6 from '@assets/prenup6_1760518054635.jpg';
+import prenup7 from '@assets/prenup7_1760518054635.jpg';
+import prenup8 from '@assets/prenup8_1760518054636.jpg';
+import prenup9 from '@assets/prenup9_1760518054636.jpg';
+import prenup10 from '@assets/prenup10_1760518054637.jpg';
+import prenup11 from '@assets/prenup11_1760518054637.jpg';
+import prenup12 from '@assets/prenup12_1760518054638.jpg';
+import prenup13 from '@assets/prenup13_1760518054638.jpg';
 
 const MemorableMomentsSection = () => {
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
-  // Original URLs for high-res lightbox viewing
-  const originalUrls = [
-    "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170289/JAH02449_m2d5nl.jpg",
-    "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170290/JAH02851_gevif1.jpg",
-    "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170290/JAH02557_rncjlm.jpg",
-    "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170291/JAH02783_rixrlo.jpg",
-    "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170291/JAH03027_oevui5.jpg",
-    "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170293/JAH03090_pifxoh.jpg",
-    "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170294/JAH03133_tfhm3n.jpg",
-    "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170295/JAH03213_m2qf1t.jpg",
-    "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170296/JAH03239_ryy3xy.jpg",
-    "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170298/JAH03286_nnbv3n.jpg",
-    "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170299/JAH03363_zsco95.jpg",
-    "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170490/JAH03394_vhicji.jpg",
-    "https://res.cloudinary.com/dr3xey7h9/image/upload/v1760170490/JAH03438_db2lvx.jpg"
-  ];
-
   const images = [
-    { src: prenup, fullSrc: optimizeCloudinaryUrl(originalUrls[0], { width: 1600, quality: 'auto:best' }), alt: "Prenup photo 1", height: "h-64" },
-    { src: prenup1, fullSrc: optimizeCloudinaryUrl(originalUrls[1], { width: 1600, quality: 'auto:best' }), alt: "Prenup photo 2", height: "h-80" },
-    { src: prenup2, fullSrc: optimizeCloudinaryUrl(originalUrls[2], { width: 1600, quality: 'auto:best' }), alt: "Prenup photo 3", height: "h-72" },
-    { src: prenup3, fullSrc: optimizeCloudinaryUrl(originalUrls[3], { width: 1600, quality: 'auto:best' }), alt: "Prenup photo 4", height: "h-96" },
-    { src: prenup4, fullSrc: optimizeCloudinaryUrl(originalUrls[4], { width: 1600, quality: 'auto:best' }), alt: "Prenup photo 5", height: "h-64" },
-    { src: prenup5, fullSrc: optimizeCloudinaryUrl(originalUrls[5], { width: 1600, quality: 'auto:best' }), alt: "Prenup photo 6", height: "h-80" },
-    { src: prenup6, fullSrc: optimizeCloudinaryUrl(originalUrls[6], { width: 1600, quality: 'auto:best' }), alt: "Prenup photo 7", height: "h-72" },
-    { src: prenup7, fullSrc: optimizeCloudinaryUrl(originalUrls[7], { width: 1600, quality: 'auto:best' }), alt: "Prenup photo 8", height: "h-64" },
-    { src: prenup8, fullSrc: optimizeCloudinaryUrl(originalUrls[8], { width: 1600, quality: 'auto:best' }), alt: "Prenup photo 9", height: "h-96" },
-    { src: prenup9, fullSrc: optimizeCloudinaryUrl(originalUrls[9], { width: 1600, quality: 'auto:best' }), alt: "Prenup photo 10", height: "h-80" },
-    { src: prenup10, fullSrc: optimizeCloudinaryUrl(originalUrls[10], { width: 1600, quality: 'auto:best' }), alt: "Prenup photo 11", height: "h-72" },
-    { src: prenup11, fullSrc: optimizeCloudinaryUrl(originalUrls[11], { width: 1600, quality: 'auto:best' }), alt: "Prenup photo 12", height: "h-64" },
-    { src: prenup12, fullSrc: optimizeCloudinaryUrl(originalUrls[12], { width: 1600, quality: 'auto:best' }), alt: "Prenup photo 13", height: "h-80" }
+    { src: prenup1, fullSrc: prenup1, alt: "Prenup photo 1", height: "h-64" },
+    { src: prenup2, fullSrc: prenup2, alt: "Prenup photo 2", height: "h-80" },
+    { src: prenup3, fullSrc: prenup3, alt: "Prenup photo 3", height: "h-72" },
+    { src: prenup4, fullSrc: prenup4, alt: "Prenup photo 4", height: "h-96" },
+    { src: prenup5, fullSrc: prenup5, alt: "Prenup photo 5", height: "h-64" },
+    { src: prenup6, fullSrc: prenup6, alt: "Prenup photo 6", height: "h-80" },
+    { src: prenup7, fullSrc: prenup7, alt: "Prenup photo 7", height: "h-72" },
+    { src: prenup8, fullSrc: prenup8, alt: "Prenup photo 8", height: "h-64" },
+    { src: prenup9, fullSrc: prenup9, alt: "Prenup photo 9", height: "h-96" },
+    { src: prenup10, fullSrc: prenup10, alt: "Prenup photo 10", height: "h-80" },
+    { src: prenup11, fullSrc: prenup11, alt: "Prenup photo 11", height: "h-72" },
+    { src: prenup12, fullSrc: prenup12, alt: "Prenup photo 12", height: "h-64" },
+    { src: prenup13, fullSrc: prenup13, alt: "Prenup photo 13", height: "h-80" }
   ];
 
   return (
