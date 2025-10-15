@@ -372,6 +372,7 @@ const EntourageSection = () => {
 
         {/* Little Groom & Little Bride */}
         <motion.div 
+          className="mb-8 md:mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 10.6 }}
@@ -393,6 +394,22 @@ const EntourageSection = () => {
                 {entourageData.littleBride}
               </p>
             </div>
+          </div>
+        </motion.div>
+
+        {/* Wedding Officiant */}
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 10.8 }}
+        >
+          <div className="text-center" data-testid="wedding-officiant-section">
+            <p className="text-xs md:text-base lg:text-lg font-telma text-foreground mb-1" data-testid="wedding-officiant-name">
+              Lt. Georlen Paul Estocado
+            </p>
+            <h3 className="text-sm md:text-lg lg:text-xl font-display font-semibold text-primary">
+              Wedding Officiant
+            </h3>
           </div>
         </motion.div>
       </div>
