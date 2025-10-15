@@ -33,7 +33,7 @@ const EntourageSection = () => {
       women: [
         "Major Irene Ibale",
         "Mrs. Anecita Diaz",
-        "Ms. Marilyn Flores",
+        "Mrs. Ma. Rhea Cayaoyao",
         "Mrs. Elsie Obenza",
         "Mrs. Josephine Gabriel",
         "Dr. Beah Bautista",
