@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import loveStoryImage from '@assets/lovestory1_1760518273236.png';
+import loveStoryImage from '@assets/Every love story is beautiful but ours is my favorite_1760518589643.jpg';
 
 const LoveStoryCover = () => {
 
