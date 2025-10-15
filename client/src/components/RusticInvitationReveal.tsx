@@ -1,11 +1,17 @@
 import { Heart } from 'lucide-react';
+import { optimizeCloudinaryUrl } from '@/lib/cloudinaryOptimize';
 import flower1Image from '@assets/flower1_1759854441524.png';
 import flowerImage from '@assets/flower_1759854441531.png';
 
 // Local images
 import groomImage from '@assets/groom_1760518273235.jpg';
 import brideImage from '@assets/bride_1760518273232.jpg';
-import coupleImage from '@assets/Every love story is beautiful but ours is my favorite_1760518273233.jpg';
+
+// Optimized Cloudinary image
+const coupleImage = optimizeCloudinaryUrl(
+  'https://res.cloudinary.com/dr3xey7h9/image/upload/v1760104739/Screenshot_2025-10-10_212037_w2gbpn.png',
+  { width: 1200, quality: 'auto:good' }
+);
 
 interface RusticInvitationRevealProps {
   animationsEnabled: boolean;
