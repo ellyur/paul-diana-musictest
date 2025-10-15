@@ -4,7 +4,13 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion } from 'framer-motion';
 import { Church, Clock, Calendar, Plane, Heart, Infinity, BookOpen } from 'lucide-react';
 import flowerImage from '@assets/flower_1759854441531.png';
-import { optimizeCloudinaryUrl } from '@/lib/cloudinaryOptimize';
+
+// Local story images
+import storyImage1 from '@assets/first-day-couple_1760518273234.png';
+import storyImage2 from '@assets/lovestory2_1760518273237.jpg';
+import storyImage3 from '@assets/lovestory3_1760518273237.jpg';
+import storyImage4 from '@assets/lovestory4_1760518273238.jpg';
+import storyImage5 from '@assets/lovestory5_1760518273238.jpg';
 
 // Register GSAP plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -20,35 +26,35 @@ const StorySection = () => {
       id: 1,
       title: "How We Met",
       text: "Our paths first crossed in 2011 through the church ministry of The Salvation Army, where a quiet friendship began to bloom—rooted in shared faith and service.",
-      image: optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760168924/03fcd72e-ead5-4766-9938-81dbe804ae2c.png", { width: 800, quality: 'auto:good' }),
+      image: storyImage1,
       icon: Church
     },
     {
       id: 2, 
       title: "The Promise to Wait",
       text: "We agreed to wait—to let our friendship mature. We promised not to rush into a relationship until after college, believing that love founded on faith and patience would endure.",
-      image: optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760169080/JAH02557_y6r64x.jpg", { width: 800, quality: 'auto:good' }),
+      image: storyImage2,
       icon: Clock
     },
     {
       id: 3,
       title: "God's Perfect Timing", 
       text: "In God's perfect timing, seven years later, that quiet friendship blossomed into the love we now cherish—a love strengthened by faith and joyfully celebrated.",
-      image: optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760169082/JAH03219_t2fi6b.jpg", { width: 800, quality: 'auto:good' }),
+      image: storyImage3,
       icon: Calendar
     },
     {
       id: 4,
       title: "Distance & Perseverance",
       text: "Distance became part of our story when one of us went abroad. Yet through every challenge, our hearts remained steadfast and our love never faltered.",
-      image: optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760263358/554384870_1695862364442290_3733811456861736073_n_zddcnk.jpg", { width: 800, quality: 'auto:good' }),
+      image: storyImage4,
       icon: Plane
     },
     {
       id: 5,
       title: "Forever Begins",
       text: "Seven years of friendship, then seven years of waiting—our story stands as a testament that true love, though tested by distance and time, always finds its way.",
-      image: optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760169395/JAH03382_1_1_mnavfe.jpg", { width: 800, quality: 'auto:good' }),
+      image: storyImage5,
       icon: Infinity,
       hasButton: true
     }

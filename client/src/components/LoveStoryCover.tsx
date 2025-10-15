@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion';
-import { optimizeCloudinaryUrl } from '@/lib/cloudinaryOptimize';
-
-const loveStoryImage = optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760161432/JAH03200_1_psactr.jpg", { width: 1200, quality: 'auto:good' });
+import loveStoryImage from '@assets/lovestory1_1760518273236.png';
 
 const LoveStoryCover = () => {
 

@@ -3,14 +3,9 @@ import { Button } from '@/components/ui/button';
 import { MapPin, ExternalLink } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { LinkPreview } from '@/components/ui/link-preview';
-import { optimizeCloudinaryUrl } from '@/lib/cloudinaryOptimize';
 
 import venuee from "@assets/venuee.png";
-
-const venueImage = optimizeCloudinaryUrl(
-  "https://res.cloudinary.com/dnlreax2z/image/upload/v1759852614/venue_qklcxs.jpg",
-  { width: 1200, quality: 'auto:good' }
-);
+import venueImage from '@assets/venue_1760518283298.png';
 
 const VenueSection = () => {
   const venues = [
@@ -103,7 +98,7 @@ const VenueSection = () => {
                       {/* Image frame decoration */}
                       <div className="absolute -inset-1 bg-gradient-to-br from-primary/20 to-primary/5 rounded-lg" />
                       <img
-                        src={optimizeCloudinaryUrl("https://res.cloudinary.com/dr3xey7h9/image/upload/v1760112463/ed40a058-feb7-46df-a165-c66ae809b5a7.png", { width: 1200, quality: 'auto:good' })}
+                        src={venueImage}
                         alt={venue.name}
                         className="relative w-full h-72 md:h-96 object-cover rounded-lg shadow-xl"
                         loading="lazy"
