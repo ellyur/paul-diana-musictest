@@ -3,10 +3,16 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion } from 'framer-motion';
 import { Church, Clock, Calendar, Plane, Heart, Infinity, BookOpen } from 'lucide-react';
+import { optimizeCloudinaryUrl } from '@/lib/cloudinaryOptimize';
 import flowerImage from '@assets/flower_1759854441531.png';
 
+// Optimized Cloudinary image for first story
+const storyImage1 = optimizeCloudinaryUrl(
+  'https://res.cloudinary.com/dr3xey7h9/image/upload/v1760168924/03fcd72e-ead5-4766-9938-81dbe804ae2c.png',
+  { width: 800, quality: 'auto:good' }
+);
+
 // Local story images
-import storyImage1 from '@assets/first-day-couple_1760518273234.png';
 import storyImage2 from '@assets/lovestory2_1760518273237.jpg';
 import storyImage3 from '@assets/lovestory3_1760518273237.jpg';
 import storyImage4 from '@assets/lovestory4_1760518273238.jpg';
