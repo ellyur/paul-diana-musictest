@@ -11,11 +11,11 @@ const guestsImage = optimizeCloudinaryUrl(
 
 const DressCodeSection = () => {
   const dressCodeColors = [
-    { name: 'Very Light Cream', color: '#F7E7CF', hex: '#F7E7CF' },
-    { name: 'Pale Beige', color: '#E4CCA0', hex: '#E4CCA0' },
-    { name: 'Light Brown', color: '#BE9F7B', hex: '#BE9F7B' },
-    { name: 'Golden Mustard', color: '#D69D2A', hex: '#D69D2A' },
-    { name: 'Medium Brown', color: '#8C6442', hex: '#8C6442' }
+    { name: 'Blush Pink', color: '#FADADD', hex: '#FADADD' },
+    { name: 'Dusty Rose', color: '#D4A5A5', hex: '#D4A5A5' },
+    { name: 'Deep Rose', color: '#A84448', hex: '#A84448' },
+    { name: 'Maroon', color: '#800020', hex: '#800020' },
+    { name: 'Dark Burgundy', color: '#5C1A1B', hex: '#5C1A1B' }
   ];
 
   return (
