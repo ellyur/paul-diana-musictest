@@ -7,11 +7,11 @@ import guestsImage from '@assets/Gemini_Generated_Image_uhnx8juhnx8juhnx (1)_176
 
 const DressCodeSection = () => {
   const dressCodeColors = [
+    { name: 'Deep Maroon', color: '#500016', hex: '#500016' },
     { name: 'Dark Maroon', color: '#6B0F1A', hex: '#6B0F1A' },
+    { name: 'Classic Maroon', color: '#800020', hex: '#800020' },
     { name: 'Burgundy', color: '#8B2635', hex: '#8B2635' },
-    { name: 'Crimson', color: '#C41E3A', hex: '#C41E3A' },
-    { name: 'Bright Red', color: '#E21F26', hex: '#E21F26' },
-    { name: 'Hot Pink', color: '#FF0D57', hex: '#FF0D57' }
+    { name: 'Light Maroon', color: '#A0364A', hex: '#A0364A' }
   ];
 
   return (
