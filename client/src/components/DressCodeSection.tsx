@@ -3,11 +3,7 @@ import { optimizeCloudinaryUrl } from '@/lib/cloudinaryOptimize';
 import principalSponsorsImage from '@assets/principal-sponsors_1760518283295.png';
 import flower9 from '@assets/flower9_1759741371017.png';
 import flower3 from '@assets/flower3_1759741371015.png';
-
-const guestsImage = optimizeCloudinaryUrl(
-  'https://res.cloudinary.com/dr3xey7h9/image/upload/v1760530766/guests_l3pmsd.webp',
-  { width: 800, quality: 'auto:good' }
-);
+import guestsImage from '@assets/Gemini_Generated_Image_uhnx8juhnx8juhnx (1)_1762402266264.png';
 
 const DressCodeSection = () => {
   const dressCodeColors = [
