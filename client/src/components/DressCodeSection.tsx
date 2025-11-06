@@ -153,7 +153,7 @@ const DressCodeSection = () => {
               Recommended Color Palette
             </h3>
             <p className="text-foreground text-center mb-8">
-              Recommended Color Palette for Guests
+              Maroon Shades
             </p>
             <div className="grid grid-cols-5 gap-4 sm:gap-6 max-w-3xl mx-auto">
               {dressCodeColors.map((colorItem, index) => (
