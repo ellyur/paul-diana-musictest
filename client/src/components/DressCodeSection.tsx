@@ -3,15 +3,16 @@ import { optimizeCloudinaryUrl } from '@/lib/cloudinaryOptimize';
 import principalSponsorsImage from '@assets/principal-sponsors_1760518283295.png';
 import flower9 from '@assets/flower9_1759741371017.png';
 import flower3 from '@assets/flower3_1759741371015.png';
-import guestsImage from '@assets/Gemini_Generated_Image_uhnx8juhnx8juhnx (1)_1762402266264.png';
+import guestsImage from '@assets/image_1763306984477.png';
 
 const DressCodeSection = () => {
   const dressCodeColors = [
-    { name: 'Deep Maroon', color: '#500016', hex: '#500016' },
-    { name: 'Dark Maroon', color: '#6B0F1A', hex: '#6B0F1A' },
-    { name: 'Classic Maroon', color: '#800020', hex: '#800020' },
-    { name: 'Burgundy', color: '#8B2635', hex: '#8B2635' },
-    { name: 'Light Maroon', color: '#A0364A', hex: '#A0364A' }
+    { name: 'Champagne', color: '#F2E8CF', hex: '#F2E8CF' },
+    { name: 'Soft Gold', color: '#D4A574', hex: '#D4A574' },
+    { name: 'Warm Beige', color: '#C9B7A2', hex: '#C9B7A2' },
+    { name: 'Light Taupe', color: '#B5A68F', hex: '#B5A68F' },
+    { name: 'Muted Sand', color: '#C4A777', hex: '#C4A777' },
+    { name: 'Pale Champagne Glitter', color: '#F5EBD7', hex: '#F5EBD7' }
   ];
 
   return (
@@ -153,9 +154,9 @@ const DressCodeSection = () => {
               Recommended Color Palette
             </h3>
             <p className="text-foreground text-center mb-8">
-              Maroon Shades
+              Champagne & Gold Tones
             </p>
-            <div className="grid grid-cols-5 gap-4 sm:gap-6 max-w-3xl mx-auto">
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-4 sm:gap-6 max-w-3xl mx-auto">
               {dressCodeColors.map((colorItem, index) => (
                 <div key={index} className="text-center group">
                   <div 
